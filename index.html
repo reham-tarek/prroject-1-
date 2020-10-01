@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Montessori </title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Gentium+Book+Basic:ital@1&family=Luckiest+Guy&family=Oleo+Script:wght@700&family=Ranchers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Chewy&family=Philosopher:ital@1&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 2000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Caption text */
+    .text {
+      color: #ad9d9d;
+      font-family: 'Chewy', cursive;
+      font-weight: bold;
+      font-size: 30px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+  </style>
+  <style>
+    @import "http://fonts.googleapis.com/css?family=Raleway";
+
+    /*----------------------------------------------
+    CSS settings for HTML div Exact Center
+    ------------------------------------------------*/
+    #abc {
+      width: 100%;
+      height: 100%;
+      opacity: .95;
+      top: 0;
+      left: 0;
+      display: none;
+      position: fixed;
+      background-color: #313131;
+      overflow: auto
+    }
+
+    img#close {
+      position: absolute;
+      right: -14px;
+      top: -14px;
+      cursor: pointer
+    }
+
+    div#popupContact {
+      position: absolute;
+      left: 50%;
+      top: 17%;
+      margin-left: -202px;
+      font-family: 'Gentium Book Basic', serif;
+    }
+
+    form {
+      max-width: 300px;
+      min-width: 250px;
+      padding: 10px 50px;
+      border: 2px solid gray;
+      border-radius: 10px;
+      font-family: raleway;
+      background-color: #fff
+    }
+
+    p {
+      margin-top: 30px
+    }
+
+    h2 {
+      background-color: #FEFFED;
+      padding: 20px 35px;
+      margin: -10px -50px;
+      text-align: center;
+      border-radius: 10px 10px 0 0
+    }
+
+    hr {
+      margin: 10px -50px;
+      border: 0;
+      border-top: 1px solid #ccc
+    }
+
+    input[type=text] {
+      width: 82%;
+      padding: 10px;
+      margin-top: 30px;
+      border: 1px solid #ccc;
+      padding-left: 40px;
+      font-size: 16px;
+      font-family: raleway
+    }
+
+    #name {
+
+      background-repeat: no-repeat;
+      background-position: 5px 7px
+    }
+
+    #email {
+      /* background-image:url(../images/email.png); */
+      background-repeat: no-repeat;
+      background-position: 5px 7px
+    }
+
+    textarea {
+      /* background-image:url(../images/msg.png); */
+      background-repeat: no-repeat;
+      background-position: 5px 7px;
+      width: 82%;
+      height: 95px;
+      padding: 10px;
+      resize: none;
+      margin-top: 30px;
+      border: 1px solid #ccc;
+      padding-left: 40px;
+      font-size: 16px;
+      font-family: raleway;
+      margin-bottom: 30px
+    }
+
+    #submit {
+      text-decoration: none;
+      width: 100%;
+      text-align: center;
+      display: block;
+      background-color: crimson;
+      color: #fff;
+      border: 1px solid crimson;
+      padding: 10px 0;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px
+    }
+
+    span {
+      color: red;
+      font-weight: 700
+    }
+
+    button {
+      width: 10%;
+      height: 45px;
+      border-radius: 3px;
+      background-color: #d9ecf2;
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+margin-right: 20px;
+    }
+  </style>
+
+  <style>
+      #myBar {
+          width: 10%;
+          height: 30px;
+          background-color:teal;
+          text-align: center;
+          line-height: 30px;
+          color: white;
+        }
+        figure {
+      width: 50%;
+      float: right;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+    }
+
+    figcaption {
+      align-items: center;
+      background: #eaeaea;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 50px auto min(115px);
+      padding: 0.5rem;
+    }
+
+    button {
+      border: 0;
+
+      display: inline-block;
+      color: white;
+      order: 1;
+      padding: 0.5rem;
+      transition: opacity 0.25s ease-out;
+
+    }
+    /* button:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    } */
+
+    label {
+      order: 2;
+      text-align: center;
+    }
+
+    progress[value] {
+      appearance: none;
+      border: none;
+      border-radius: 3px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+      color: dodgerblue;
+      /* display: inline;  */
+      height: 15px;
+      order: 1;
+      position: relative;
+      width: 30%;
+     }
+     progress[value]::-webkit-progress-bar {
+      background-color: white;
+      border-radius: 3px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+    }
+    progress[value]::-webkit-progress-value {
+      background-image:
+      linear-gradient(to right, green, cyan);
+      border-radius: 3px;
+      position: relative;
+      transition: width 1s linear;
+    }
+    
+    /*
+    style for montessori courses
+    */
+    .container  { font-family: 'Open Sans', sans-serif;
+            background-color: bisque;;
+            }  
+    .container .course {text-align: center;
+                   padding-top: 50px;
+                   color: #d82323;
+                   font-size: 30px;
+                  font-style: italic;}
+.two,.four,.six {text-align: center;padding-bottom: 50px;}  
+.four {float: right;padding-right: 200px;} 
+.six {float: right;padding-right: 120px;}
+.two {display: inline-block;
+     padding-left: 180px;
+     } 
+.montessori-title-line {width: 120px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    height: 3px;
+    background: rgb(36 134 125);
+    content: '';
+    position: relative;}
+
+.two,.four,.six p {color :rgb(36 134 125);
+                  font-size: 20px;
+                }
+    
+
+  </style>
+
+</head>
+
+
+<body id="body" style="overflow:hidden;" style="margin:0px; padding: 0px; font-family: 'Trebuchet MS',verdana;" onload="getLocalStorage()">
+  <header>
+    <h1 id="name">montessori space</h1>
+    <img id="logo" src="Images/logo.png" alt="logo-pic">
+
+    <div id="navbar">
+      <a id="navlink" href="#coursesavailable">Products</a>
+      <a id="navlink" href="contactform.html">SignUp</a>
+      <a id="navlink" href="blog.html">OurBlog</a>
+
+    </div>
+
+    <br><br>
+
+  </header>
+
+
+
+  <div id="header" style="width: 100% ; height: 30% ; background-color: whitesmoke;">
+
+  </div>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="Images/m1.jpg" style="width:100% ;height: 400px ">
+      <div class="text">Know Your Child's Behaviour</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="Images/m6.jpg" style="width:100%;height: 400px">
+      <div class="text">How to teach your kid</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="Images/m7.jpeg" style="width:100% ;height: 400px">
+      <div class="text">Growing Up faster</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="Images/m8.jpg" style="width:100% ; height: 400px">
+      <div class="text">More activities</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="Images/m9.jpg" style="width:100% ; height: 400px">
+      <div class="text">Great result</div>
+    </div>
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <h4 style="color:white;font:bold;padding-left: 40px">Montessori</h4>
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+  </script>
+
+  <div id="coursesavailable" class="container">
+    <h2 class="course"> MONTESSORI COURSES</h2>
+    <div class="montessori-title-line"></div>
+    <div class="two">
+
+      <iframe width="400" height="315" src="https://www.youtube.com/embed/6ZNq6t8WalY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p id="two" onmouseover="big(this.id)" onmouseout="small(this.id)"> Montessori Course: 1-2 years</p>
+
+    </div>
+    <div class="four">
+      <iframe width="400" height="315" src="https://www.youtube.com/embed/XiRDtKV8uQs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p id="four" onmouseover="big(this.id)" onmouseout="small(this.id)"> Montessori Course : 4-6 years</p>
+    </div>
+    <div class="six">
+      <iframe width="400" height="315" src="https://www.youtube.com/embed/52Do6l_nNSw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p id="six" onmouseover="big(this.id)" onmouseout="small(this.id)"> Montessori Cource: 2-4 years</p>
+    </div>
+  </div>
+  <br><br>
+  <script>
+    function big(id) {
+      document.getElementById(id).style.color = "#d82323";
+      document.getElementById(id).style.fontSize = "30px";
+    }
+
+    function small(id) {
+      document.getElementById(id).style.color = "rgb(36 134 125)";
+      document.getElementById(id).style.fontSize = "20px"
+    }
+  </script>
+
+  <script src="gam.js" charset="utf-8"></script>
+  <br>
+  <style>
+    #myBar {
+      width: 10%;
+      height: 30px;
+      background-color: teal;
+      text-align: center;
+      line-height: 30px;
+      color: white;
+    }
+
+    figure {
+      width: 50%;
+      float: right;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+    }
+
+    figcaption {
+      align-items: center;
+      background: #eaeaea;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 50px auto min(115px);
+      padding: 0.5rem;
+    }
+
+    button {
+      border: 0;
+      background: white;
+      display: inline;
+      color: #68b0ab;
+      order: 1;
+      padding: 0.5rem;
+      font-weight: 400;
+      transition: opacity 0.25s ease-out;
+      width: 100%;
+    }
+
+    button:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    label {
+      order: 2;
+      text-align: center;
+    }
+
+    progress[value] {
+      appearance: none;
+      border: none;
+      border-radius: 3px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+      color: dodgerblue;
+      /* display: inline;  */
+      height: 15px;
+      order: 1;
+      position: relative;
+      width: 30%;
+    }
+
+    progress[value]::-webkit-progress-bar {
+      background-color: white;
+      border-radius: 3px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+    }
+
+    progress[value]::-webkit-progress-value {
+      background-image:
+        linear-gradient(to right, green, cyan);
+      border-radius: 3px;
+      position: relative;
+      transition: width 1s linear;
+    }
+  </style>
+
+  <div id="abc">
+    <!-- Popup Div Starts Here -->
+    <div id="popupContact">
+      <!-- Contact Us Form -->
+      <form action="mailto:christinefayez44@gmail.com" id="form" method="post" name="form" style="background-image: url(pic.png)">
+        <img id="close" src="notvalid.png" width="20px" height="20px" onclick="div_hide()">
+        <h2>Contact Us</h2>
+        <hr>
+        <input id="name" name="name" placeholder="Name" type="text">
+        <input id="email" name="email" placeholder="Email" type="text">
+        <textarea id="msg" name="message" placeholder="Message"></textarea>
+        <a href="javascript:%20check_empty()" id="submit">Send message</a>
+      </form>
+    </div>
+    <!-- Popup Div Ends Here -->
+  </div>
+  <!-- Display Popup Button -->
+
+
+  <script>
+    function check_empty() {
+      if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") {
+        alert("Fill All Fields !");
+      } else {
+        document.getElementById('form').submit();
+        alert("Form Submitted Successfully...");
+      }
+    }
+    //Function To Display Popup
+    function div_show() {
+      document.getElementById('abc').style.display = "block";
+    }
+    //Function to Hide Popup
+    function div_hide() {
+      document.getElementById('abc').style.display = "none";
+    }
+
+
+    //validation mail
+    // function ValidateEmail(inputText)
+    // {
+    // var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    // if(email.value.match(mailformat))
+    // {
+    // alert("Valid email address!");
+    // document.form1.text1.focus();
+    // return true;
+    // }
+    // else
+    // {
+    // alert("You have entered an invalid email address!");
+    // document.form1.text1.focus();
+    // return false;
+    // }
+    // }
+  </script>
+  <table width="100%" style="height: 70%;" cellpadding="10" cellspacing="0" border="0">
+
+
+  <tr>
+
+
+  <td width="100%" valign="top" style="background-color:rgb(131, 158, 187);">
+      <marquee><h1>Hello! &#128075;</h1></marquee>
+      <h3 style="font-weight: bold;">Learn colors with us
+          &#127912;</h3>
+      <!-- <video width="600" height="300" style="float:right; padding-right: 10px;" controls>
+
+          <source src="le.mkv" type="video/mp4">
+          <source src="mov_bbb.ogg" type="video/ogg">
+
+        </video> -->
+        <figure>
+          <video id="video" src="le.mkv">
+          </video>
+          <figcaption>
+              <label value="" id="timer" for="progress" role="timer"></label>
+              <button id="play" aria-label="Play" role="button">
+                  Play
+              </button>
+              <!-- <progress id="progress" max="100" value="0">
+                  Progress
+              </progress>  -->
+              </figcaption>
+          </figure>
+
+        <br>
+
+        <h4 style="color:gold;font-weight: bold;">your progress</h4>
+        <!-- <div id="myProgress">
+          <div id="myBar">10%</div>
+        </div> -->
+        <progress id="progress" max="100" value="0" name="progress">
+          Progress
+      </progress>
+      <br>
+        <br>
+        <hr width="50%">
+
+        <a href="sticky.html"><img src="ims.jpeg" alt="notes" style="width:100px;height:100px;"onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a>
+        <h4 id="p" style="font-weight: bold;">Check Notes</h4>
+
+
+  </td>
+  <!-- footer -->
+
+  </table>
+  <script>
+    // debugger;
+   function bigImg(x) {
+    x.style.height = "110px";
+    x.style.width = "110px";
+  //   document.getElementById("p").innerHTML="Check Notes"
+  }
+
+  function normalImg(x) {
+    x.style.height = "100px";
+    x.style.width = "100px";
+  //   document.getElementById("p").innerHTML=""
+  }
+  const progress = document.getElementById("progress");
+  const timer = document.getElementById( "timer" );
+
+  function progressLoop() {
+  setInterval(function () {
+  	progress.value = Math.round((video.currentTime / video.duration) * 100);
+  	timer.innerHTML = Math.round(video.currentTime) + " seconds";
+  });
+  }
+
+  // progressLoop();
+  button = document.getElementById( "play" );
+
+  function playPause() {
+    if ( video.paused ) {
+      if(localStorage["timer"] && parseInt(localStorage["timer"]) > 0)
+        video.currentTime = parseInt(localStorage["timer"])
+      video.play();
+      button.innerHTML = "Pause";
+    }
+    else {
+      video.pause();
+      button.innerHTML = "Play";
+    }
+  }
+
+  button.addEventListener( "click", playPause );
+  video.addEventListener("play", progressLoop)
+
+
+
+   window.onbeforeunload= function(event) {
+      debugger
+    localStorage["progress"] = document.getElementById("progress").value;
+
+    localStorage["timer"] = video.currentTime;
+    event.preventDefault();
+
+    event.returnValue = '';
+  }
+
+
+  // window.addEventListener('beforeunload', setlocalstorage)
+
+  //   function setlocalstorage(event)
+  // {
+
+
+  //   localStorage["progress"] = document.getElementById("progress").value;
+
+  // 		localStorage["timer"] = document.getElementById("timer").value;
+  //     alert("saved data")
+  //     event.preventDefault
+  // event.returnValue = '';
+  // 	}
+
+
+
+  function getLocalStorage()
+  {
+      document.getElementById("progress").value = localStorage["progress"];
+  		document.getElementById("timer").value = localStorage["timer"];
+
+  	}
+
+  </script>
+
+  <footer id="homefooter">
+    <button id="gamebutton" type="button" name="button"><a id="buuttext" href="game.html"> You Want to Play a Game? </a></button>
+
+  </footer>
+
+<button id="navlink" id="popup" onclick="div_show()">contact us</button>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montessori</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+
+
+    <form style="border: 3px solid #9e3458;border-radius: 10%;margin-top: 5px;margin-right: 50px;padding: 0px 20px;"
+        action="" method="GET">
+        <h1 style="margin: -1px 0;"> Child Information</h1>
+        <label class="change"> Name</label>
+        <input type="text" class="size" placeholder="Enter your Child Name" value="" onblur="childname(this.value)">
+        <div id="invalid"></div>
+
+        <br> <br>
+        <label class="change"> Age </label>
+        <input class="size" type="text" placeholder="Enter your Child Age" onblur="limitage(this.value)" id="limitagee">
+         <div id="limit"></div>
+        <br> <br>
+        <label class="change"> Gender </label> <br>
+        <label style="font-weight: bold;font-size: 20px;color: #6014e8;display: inline;">Male</label>
+        <input type="radio" value="Male" name="gender"> <br><br>
+        <label style="font-weight: bold;font-size: 20px;color: palevioletred;">Female</label>
+        <input type="radio" value="feMale" name="gender">
+        <br> <br>
+        <h1 style="margin: -5px 0;"> Parent Information</h1>
+        <label class="change"> Name</label>
+        <input type="text" class="size" placeholder="Enter your fullname">
+        <br> <br>
+        <label class="change"> Password</label>
+        <input type="password" class="size" placeholder="Enter your password atleast 6 number"
+            onblur="password(this.value)">
+        <div id="novalid"></div>
+        <br> <br>
+        <label class="change">E-mail</label>
+        <input type="email" class="size" placeholder="Enter your E-mail"  id="pp" onblur="mm(this.value)">
+        <div id="cc"></div>
+        <br> <br>
+        <label class="change">PhoneNumber</label>
+        <input type="text" class="size" placeholder="Enter your PhoneNumber" id="phone" onblur="mobil(this.value)">
+        <div id="phoneNumber"></div>
+        <br> <br>
+        <input type="button" value="sign up" class="signup">
+
+
+
+    </form>
+
+
+</body>
+
+</html>
+
+<script>
+    function childname(username) {
+        if ((username == "") || (username.length >= 15) || (username == 5)) {
+            document.getElementById("invalid").innerText = "invalid"
+            document.getElementById("invalid").style.display = "inline"
+            document.getElementById("invalid").style.color = "#632bc7"
+
+        } else {
+            document.getElementById("invalid").innerText = ""
+        }
+    }
+
+    function password(pass) {
+
+        if ((pass.length <= 5) || (pass = "")) {
+            document.getElementById("novalid").innerText = "password should have at least 6 number"
+            document.getElementById("novalid").style.color = "#632bc7"
+            
+           
+        } else {
+            document.getElementById("novalid").innerText = ""
+        }
+    }
+
+    function mm(){
+     
+        if(!/[A-z]+[0-9]+@gmail.com$/g.test(document.getElementById("pp").value) ){
+       document.getElementById("cc").innerText = " email should be ahmed123@gmail.com"
+        } else {
+            document.getElementById("cc").innerText = ""
+        }
+    }
+
+    function mobil(){
+     
+     if(!/(^011|^010|^012)[0-9]{8}$/g.test(document.getElementById("phone").value)) {
+    document.getElementById("phoneNumber").innerText = "invalid phonenumber"
+    document.getElementById("phoneNumber").style.color = "#632bc7"
+
+     } else {
+         document.getElementById("phoneNumber").innerText = ""
+     }
+ }
+
+ function limitage(){
+
+     if(document.getElementById("limitagee").value > 6){
+         document.getElementById("limit").innerText = "age should be 1-6 yearsold"
+         document.getElementById("limit").style.color = "#632bc7"
+         
+     }else{ document.getElementById("limit").innerText = ""}
+ }
+    
+</script>
+
+
+
+</body>
+
+</html>

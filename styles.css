@@ -1,0 +1,276 @@
+body {
+  background-color: #d9ecf2;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+header {
+  margin-top: 30px;
+  height: 90px;
+  background-color: white;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#name {
+  display: inline-block;
+  margin-top: 0;
+  margin-left: 3%;
+  margin-right: 4%;
+  font-family: 'Ranchers', cursive;
+  letter-spacing: 4px;
+  font-size: 3rem;
+  color: #ffc93c;
+}
+
+#logo {
+  height: 70px;
+}
+
+#navbar {
+  display: inline-block;
+  margin-left: 450px;
+  word-spacing: 5px;
+  color: #679b9b;
+  margin-bottom: 20px;
+  font-family: 'Gentium Book Basic', serif;
+  font-size: 1.2rem;
+}
+
+#navlink {
+  margin-top: 0;
+  margin-bottom: 50%;
+  color: #ad9d9d;
+}
+
+#homefooter {
+  background-color: #d9ecf2;
+  height: 100px;
+}
+
+#gamebutton {
+  height: 100px;
+  width: 250px;
+  background-image: url("Images/game.jpg");
+  background-size: contain;
+  border: 20px;
+  border-color: #70adb5;
+  border-style: solid;
+  border-radius: 15px;
+  margin-left: 40%;
+}
+
+#buuttext {
+  color: white;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 8px #ff4b5c;
+}
+
+#gamebody {
+  text-align: center;
+  background-color: #056674;
+}
+
+.gametitle {
+  font-size: 6rem;
+  color: #f0f0f0;
+  font-family: 'Chewy', cursive;
+  text-shadow: 3px 0 #931a25;
+  letter-spacing: 8px;
+}
+
+#gamefoot {
+  background-color: #838383;
+  font-family: sans-serif;
+}
+
+.apple {
+  background-image: url("Images/apple.jpg");
+  background-size: contain;
+}
+
+.ball {
+  background-image: url("Images/ball.jpg");
+  background-size: contain;
+}
+
+.car {
+  background-image: url("Images/car.jpg");
+  background-size: contain;
+}
+
+.dog {
+  background-image: url("Images/Dog.jpg");
+  background-size: contain;
+}
+
+.tree {
+  background-image: url("Images/tree.jpg");
+  background-size: contain;
+}
+
+.umbrella {
+  background-image: url("Images/umbrella.jpg");
+  background-size: contain;
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DBEDF3;
+  text-shadow: 3px 2px 3px #f40552;
+  border-radius: 15px;
+  display: inline-block;
+  width: 400px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+}
+
+table {
+  text-align: justify;
+  margin-left: 7%;
+  margin-right: 5%;
+  width: 80%;
+  border-spacing: 60px;
+  font-family: 'Gentium Basic', serif;
+  color: #204051;
+  font-size: 1.1rem;
+}
+
+#boardimg {
+  height: 500px;
+  margin-right: 20px;
+  margin-right: 0;
+  padding-right: 0;
+  margin-left: 10%;
+}
+
+#leafpic {
+  width: 400px;
+}
+
+#clockyellow {
+  width: 400px;
+}
+
+#featherpic {
+  width: 400px;
+}
+
+#blogheader {
+  text-align: center;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 1.5rem;
+  height: 100px;
+}
+
+#blhead {
+  padding-top: 30px;
+  color: #3b6978;
+}
+
+#blogfooter {
+  padding-top: 2%;
+  padding-bottom: 0;
+  margin-bottom: 2%;
+  height: 60px;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+}
+
+#bli {
+  font-family: 'Gentium Book Basic', serif;
+  font-size: 1.2rem;
+  color: #ad9d9d;
+}
+
+#subhead {
+  color: #3b6978;
+  font-family: 'Gentium Basic', serif;
+}
+
+#pathimg {
+  height: 300px;
+  margin-left: 25%;
+}
+
+#reflinks {
+  word-spacing: 5px;
+  color: #679b9b;
+  font-family: 'Gentium Book Basic', serif;
+}
+
+.container {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fafcc2;
+  display: block;
+}
+
+.container .course {
+  text-align: center;
+  padding-top: 50px;
+  color: #a0c1b8;
+  font-size: 30px;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.two, .four, .six {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.four {
+  float: right;
+  padding-right: 200px;
+}
+
+.two {
+  display: inline-block;
+  padding-left: 180px;
+}
+
+.montessori-title-line {
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  height: 3px;
+  background: rgb(36 134 125);
+  content: '';
+  position: relative;
+}
+
+.two, .four {
+  font-size: 30px;
+  display: inline-block;
+  font-family: 'Gentium Basic', serif;
+}
+
+.six {
+  font-size: 30px;
+  display: block;
+  font-family: 'Gentium Basic', serif;
+}

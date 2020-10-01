@@ -1,0 +1,235 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        #myBar {
+            width: 10%;
+            height: 30px;
+            background-color:teal;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+          }
+          figure { 
+        width: 50%; 
+        float: right;
+      } 
+  
+      video { 
+        display: block; 
+        width: 100%; 
+      } 
+  
+      figcaption { 
+        align-items: center; 
+        background: #eaeaea; 
+        display: grid; 
+        grid-gap: 1rem; 
+        grid-template-columns: 50px auto min(115px); 
+        padding: 0.5rem; 
+      } 
+  
+      button { 
+        border: 0; 
+        background: green; 
+        display: inline; 
+        color: white; 
+        order: 1; 
+        padding: 0.5rem; 
+        transition: opacity 0.25s ease-out; 
+        width: 100%; 
+      } 
+      button:hover { 
+        cursor: pointer; 
+        opacity: 0.8; 
+      } 
+  
+      label { 
+        order: 2; 
+        text-align: center; 
+      } 
+  
+      progress[value] {
+        appearance: none; 
+        border: none; 
+        border-radius: 3px; 
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset; 
+        color: dodgerblue;
+        /* display: inline;  */
+        height: 15px; 
+        order: 1; 
+        position: relative; 
+        width: 30%; 
+       }
+       progress[value]::-webkit-progress-bar { 
+        background-color: white; 
+        border-radius: 3px; 
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset; 
+      } 
+      progress[value]::-webkit-progress-value { 
+        background-image:  
+        linear-gradient(to right, green, cyan); 
+        border-radius: 3px; 
+        position: relative; 
+        transition: width 1s linear; 
+      } 
+
+    </style>
+</head>
+
+
+
+ 
+
+
+<body style="margin:0px; padding: 0px; font-family: 'Trebuchet MS',verdana;" onload="getLocalStorage()">
+
+<table width="100%" style="height: 70%;" cellpadding="10" cellspacing="0" border="0">
+
+
+<tr>
+
+
+<td width="100%" valign="top" style="background-color:rgb(131, 158, 187);">
+    <marquee><h1>Hello! &#128075;</h1></marquee>
+    <h3 style="font-weight: bold;">Learn colors with us
+        &#127912;</h3>
+    <!-- <video width="600" height="300" style="float:right; padding-right: 10px;" controls>
+       
+        <source src="le.mkv" type="video/mp4">
+        <source src="mov_bbb.ogg" type="video/ogg">
+      
+      </video> -->
+      <figure> 
+        <video id="video" src="le.mkv"> 
+        </video> 
+        <figcaption> 
+            <label value="" id="timer" for="progress" role="timer"></label> 
+            <button id="play" aria-label="Play" role="button"> 
+                Play 
+            </button> 
+            <!-- <progress id="progress" max="100" value="0"> 
+                Progress 
+            </progress>  -->
+            </figcaption> 
+        </figure>
+        
+      <br>
+      
+      <h4 style="color:gold;font-weight: bold;">your progress</h4>
+      <!-- <div id="myProgress">
+        <div id="myBar">10%</div>
+      </div> -->
+      <progress id="progress" max="100" value="0" name="progress"> 
+        Progress 
+    </progress> 
+    <br>
+      <br>
+      <hr width="50%">
+    
+      <a href="sticky.html"><img src="ims.jpeg" alt="notes" style="width:100px;height:100px;"onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a>
+      <h4 id="p" style="font-weight: bold;">Check Notes</h4>
+     
+
+</td>
+<!-- footer -->
+<tr><td colspan="2" align="center" height="20" style="background-color: rgb(9, 5, 48);color:red;">Copyright © ITI</td></tr>
+</table>
+<script>
+  // debugger;
+ function bigImg(x) {
+  x.style.height = "110px";
+  x.style.width = "110px";
+//   document.getElementById("p").innerHTML="Check Notes"
+}
+
+function normalImg(x) {
+  x.style.height = "100px";
+  x.style.width = "100px";
+//   document.getElementById("p").innerHTML=""
+} 
+const progress = document.getElementById("progress"); 
+const timer = document.getElementById( "timer" ); 
+
+function progressLoop() { 
+setInterval(function () { 
+	progress.value = Math.round((video.currentTime / video.duration) * 100); 
+	timer.innerHTML = Math.round(video.currentTime) + " seconds"; 
+}); 
+} 
+
+// progressLoop();
+button = document.getElementById( "play" ); 
+
+function playPause() { 
+  if ( video.paused ) {
+    if(localStorage["timer"] && parseInt(localStorage["timer"]) > 0)
+      video.currentTime = parseInt(localStorage["timer"])
+    video.play(); 
+    button.innerHTML = "Pause"; 
+  } 
+  else { 
+    video.pause(); 
+    button.innerHTML = "Play"; 
+  } 
+} 
+
+button.addEventListener( "click", playPause ); 
+video.addEventListener("play", progressLoop)
+
+
+
+ window.onbeforeunload= function(event) {
+    debugger
+  localStorage["progress"] = document.getElementById("progress").value;
+  
+  localStorage["timer"] = video.currentTime;
+  event.preventDefault();
+  
+  event.returnValue = '';
+}
+ 
+
+// window.addEventListener('beforeunload', setlocalstorage)
+
+//   function setlocalstorage(event)
+// {
+   
+	
+//   localStorage["progress"] = document.getElementById("progress").value;
+  
+// 		localStorage["timer"] = document.getElementById("timer").value;
+//     alert("saved data")
+//     event.preventDefault
+// event.returnValue = '';
+// 	}
+
+
+
+function getLocalStorage() 
+{
+    document.getElementById("progress").value = localStorage["progress"];   
+		document.getElementById("timer").value = localStorage["timer"];
+    
+	} 
+	
+
+
+ 
+
+
+
+
+
+</script>
+</body>
+
+<html>
+
+
+
+
+
